@@ -1,0 +1,18 @@
+<html>Sum1 : <input type="text" name="num" id="num1" onblur="Sum()" /><br>
+Sum2 : <input type="text" name="num" id="num2" onblur="Sum()"/><br>
+<br><br>
+Total Sum : <input type="text" name="totalsum" id="totalsum"/>
+
+
+    <script type="text/javascript">
+function Sum(){
+    var arr = document.getElementsByName('num');
+    var to=0;
+    for(var i=0;i<arr.length;i++){
+        if(parseInt(arr[i].value))
+            to += parseInt(arr[i].value);
+    }
+    document.getElementById('totalsum').value = to;
+}
+
+</script></html>

@@ -1,0 +1,103 @@
+<html>
+<head>
+ <style>
+  body {
+   background-image: url('sample/r.jpg');
+   background-size:cover;
+   background-position:center;
+   position:relative;
+   color: #fff;
+   font-family: Calibri, sans-serif;
+   font-size: 100%;
+   line-height: 1.5em;
+    }
+   h1{
+   color:orange;
+   }
+   h3{
+   color:pink;
+   }
+   h4{
+   color:red;
+   }
+   </style></head>
+   <body background="sample/r.jpg">
+  
+                               <table>
+                        <tr>
+                            <td>
+                                <img src="http://fourscape.com/wp-content/uploads/2015/09/taj-hotels.jpg" style="width:80%; height:60%">
+                            </td>
+                            
+                           <td><center><h1>
+                                WELCOME TO TAJ<br>
+                                Quintessentially Indian in its fabric<br>
+                                Taj Hotels Palaces Resorts Safaris for<br>delivering a unique flavour of hospitality 
+                        </h1> </center>   </td>
+                        </tr>
+                    </table>
+
+          
+                    <table>
+                        <tr>
+                            <td><h3>
+                                BANGALORE
+THE TAJ WEST END<br>
+Race Course Road,<br>
+Bangalore ,
+Karnataka 560 001
+India<br></h3>
+                            </td>
+                            </tr>
+                    </table>
+					
+            <tr><h4>
+                <td>
+                    BILL
+                </td>
+                
+                <td>
+                    Check #
+                </td>
+            </h4></tr>
+            
+            <tr>
+                <td>
+                    <form method="POST" action="formvalid.php">  
+					<h3>Name: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input type="text" id="username" autofocus required>
+  <br><br>
+  E_mail:&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input type="text" id="email" required  placeholder="@jklu.edu.in">
+  <br><br>
+  Booking_Id: &nbsp &nbsp &nbsp <input type="text" id="a" pattern="[A-Za-z0-9]{3}" required>
+  <br><br>
+  Room_no: &nbsp &nbsp &nbsp &nbsp &nbsp <input type="text" id="b" required>
+    <br><br>
+  No_of_people: &nbsp <input type="text"  id="c" pattern="[0-9]" required>
+  <br><br>
+  Entertainment: &nbsp <input type="text" name="num" id="d" onblur="Sum()" />
+  <br><br>
+  Luxury: &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp <input type="text" name="num" id="e" onblur="Sum()"  />
+    <br><br>
+  GST: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input type="text" name="num" id="f" onblur="Sum()" />
+  <br><br>
+  <!--Total:&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp<input type="text" name="g">-->
+  Total: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp <input type="text" name="g" id="g"/> 
+  <br><br>
+    <script type="text/javascript">
+function Sum(){
+    var arr = document.getElementsByName('num');
+    var to=0;
+    for(var i=0;i<arr.length;i++){
+	console.log("Startted");
+        if(parseInt(arr[i].value))
+            to += parseInt(arr[i].value);
+			console.log(to);
+    }
+    document.getElementById('g').value = to;
+}</script>
+  <input type="submit" name="submit" value="Submit"> </form>
+             </h3>   </td>
+            </tr>
+        </table>
+</body>
+</html>
